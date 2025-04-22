@@ -1,6 +1,5 @@
 import {connectDB} from "@/util/database";
 import Link from "next/link";
-import DetailLink from "@/app/list/DetailLink";
 
 export default async function List() {
 
@@ -14,7 +13,7 @@ export default async function List() {
                     <Link href={`/detail/${item._id}`}>
                         <h4>{item.title}</h4>
                     </Link>
-                    <DetailLink/>
+                    <Link href={'/edit/' + item._id} className="list-btn">✏️</Link>
                     <p>{item.content}</p>
                 </div>
             )}
