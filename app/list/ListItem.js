@@ -24,6 +24,7 @@ export default function ListItem(props) {
                             })
                         }}>🗑️</span>
                         <p>{item.content}</p>
+                        <p>{item.author}</p>
                     </div>
                 )
             }
